@@ -27,7 +27,7 @@
     <div class="mt-5">
       <mat-form-field class="fullWidth" appearance="outline">
         <mat-label>Ngày vào viện*</mat-label>
-        <input matInput type="date" name="startIn" formControlName="startIn" />
+        <input matInput type="text" name="startIn" formControlName="startIn" />
         <mat-error *ngIf="formInstance.controls['startIn']?.errors?.required">field required</mat-error>
       </mat-form-field>
     </div>

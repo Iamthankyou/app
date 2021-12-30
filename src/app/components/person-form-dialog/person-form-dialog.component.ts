@@ -22,8 +22,6 @@ export class PersonFormDialogComponent implements OnInit {
       "reason": new FormControl('', Validators.required),
       "doctorName": new FormControl('', Validators.required),
       "treatmentMethods": new FormControl('', Validators.required),
-      // "age": new FormControl('', Validators.required),
-      // "job": new FormControl('', Validators.required),
     });
 
     this.formInstance.setValue(data);
@@ -34,6 +32,6 @@ export class PersonFormDialogComponent implements OnInit {
 
   save(): void {
     console.log(this.formInstance.value);
-    this.dialogRef.close(Object.assign(new Person(),this.formInstance.value));
+    this.dialogRef.close(Object.assign(this.data,this.formInstance.value));
   }
 }
