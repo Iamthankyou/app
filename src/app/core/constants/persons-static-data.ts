@@ -14,7 +14,7 @@ import { Person } from "../models/person";
 // ]
 //
 
-export const personsData : ({ startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string } | { startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string } | { startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string } | { startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string })[] = [
+export const  personsData : ({ startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string } | { startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string } | { startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string } | { startOut: string; patientName: string; reason: string; doctorName: string; treatmentMethods: string; patientId: string; idRecord: string; startIn: string })[] = [
   {
     "idRecord": "BA-001",
     "patientId": "BN-435",

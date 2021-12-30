@@ -24,7 +24,7 @@ export class PersonService {
   }
 
   edit(person: Person) {
-    let findElem = this.persons.find(p => p.idRecord== person.idRecord);
+    let findElem = this.persons.find(p => {return p.idRecord== person.idRecord});
 
     findElem.patientName = person.patientName;
     // findElem.age = person.age;
