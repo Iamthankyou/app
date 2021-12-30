@@ -19,7 +19,7 @@
     <div class="mt-5">
       <mat-form-field class="fullWidth" appearance="outline">
         <mat-label>Tên  bệnh nhân*</mat-label>
-        <input matInput type="date" name="patientName" formControlName="patientName" />
+        <input matInput type="text" name="patientName" formControlName="patientName" />
         <mat-error *ngIf="formInstance.controls['patientName']?.errors?.required">field required</mat-error>
       </mat-form-field>
     </div>
