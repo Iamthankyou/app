@@ -1,0 +1,83 @@
+<h1 mat-dialog-title>Chỉnh sửa thông tin</h1>
+<div mat-dialog-content>
+  <form [formGroup]="formInstance">
+    <div>
+      <mat-form-field class="fullWidth" appearance="outliness">
+        <mat-label>Mã bệnh án*</mat-label>
+        <input matInput type="text" name="idRecord" formControlName="idRecord">
+        <mat-error *ngIf="formInstance.controls['idRecord']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="fullWidth" appearance="outliness">
+        <mat-label>Mã  bệnh nhân*</mat-label>
+        <input matInput type="text" name="patientId" formControlName="patientId">
+        <mat-error *ngIf="formInstance.controls['patientId']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="mt-5">
+      <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Tên  bệnh nhân*</mat-label>
+        <input matInput type="date" name="patientName" formControlName="patientName" />
+        <mat-error *ngIf="formInstance.controls['patientName']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="mt-5">
+      <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Ngày vào viện*</mat-label>
+        <input matInput type="date" name="startIn" formControlName="startIn" />
+        <mat-error *ngIf="formInstance.controls['startIn']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="mt-5">
+      <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Ngày ra viện*</mat-label>
+        <input matInput type="text" name="startOut" formControlName="startOut" />
+        <mat-error *ngIf="formInstance.controls['startOut']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="mt-5">
+      <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Lý do nhập viện*</mat-label>
+        <input matInput type="text" name="reason" formControlName="reason" />
+        <mat-error *ngIf="formInstance.controls['reason']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="mt-5">
+      <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Phương pháp điều trị*</mat-label>
+        <input matInput type="text" name="treatmentMethods" formControlName="treatmentMethods" />
+        <mat-error *ngIf="formInstance.controls['treatmentMethods']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="mt-5">
+      <mat-form-field class="fullWidth" appearance="outline">
+        <mat-label>Tên bác sĩ*</mat-label>
+        <input matInput type="text" name="doctorName" formControlName="doctorName" />
+        <mat-error *ngIf="formInstance.controls['doctorName']?.errors?.required">field required</mat-error>
+      </mat-form-field>
+    </div>
+
+
+<!--    <div class="mt-5">-->
+<!--      <mat-form-field class="fullWidth" appearance="outline">-->
+<!--        <mat-label>Job *</mat-label>-->
+<!--        <mat-select name="job" formControlName="job">-->
+<!--          <mat-option value="Software Developer">Software Developer</mat-option>-->
+<!--          <mat-option value="Physician">Physician</mat-option>-->
+<!--          <mat-option value="Dentist">Dentist</mat-option>-->
+<!--          <mat-option value="Nurse">Nurse</mat-option>-->
+<!--        </mat-select>-->
+<!--        <mat-error *ngIf="formInstance.controls['job']?.errors?.required">field required</mat-error>-->
+<!--      </mat-form-field>-->
+<!--    </div>-->
+  </form>
+</div>
+<div class="mt-5" mat-dialog-actions>
+  <button mat-raised-button color="primary" [disabled]="formInstance.dirty && formInstance.errors" (click)="save()"
+    cdkFocusInitial>Thay đổi</button>
+  <button mat-raised-button mat-dialog-close>Trở về</button>
+</div>
