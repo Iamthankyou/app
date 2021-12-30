@@ -33,7 +33,7 @@ export class PersonService {
     this.persons$.next(this.persons);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     console.log('??',this.persons);
     this.persons = this.persons.filter(p =>
       p.idRecord !== id
